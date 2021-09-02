@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+.contenedor{
+    max-width: 700px;
+    width: 90%;
+    height: 500px;
+    border: 2px solid;
+    box-shadow: 0 0 0 60px rgb(147, 176, 198);
+    margin: auto;
+    padding: 20px;
+    background-color: #ffff;
+    margin-top: 70px;
+}
+
+.contenedorPadre{
+    width: 920px;
+    height: 100vh;
+    margin-top: 0;
+    background-color: rgb(47, 39, 82);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+}
+
+.primeraPantalla{
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.imagenPrincipal{
+    width: 350px;
+    
+}
+
+.opcion{
+    background-color: rgb(240, 239, 239);
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+      
+}
+
+.opcion p{
+    font-size: 26px;
+    color: rgb(0, 42, 141);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 40px;
+}
+
+h1{
+    font-family:sans-serif;
+    color: rgb(255, 147, 51);
+    font-size: 25px;
+    
+}
+
+h2{
+    color: rgb(0, 42, 141);
+    font-family:monospace;
+    font-size: 20px;
+}
+
+.telefono{
+    width: 30px;
+    margin: 5px;
+}
+
+.contacto{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(255, 147, 51);  
+    font-family:sans-serif;  
+}
+
+.flecha{
+    width: 35px;
+    
+}
+
+.opcionesTwo{
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+.primeraPantalla input{
+    border: none;
+    border-bottom: 2px solid rgb(255, 147, 51);
+    width: 80%;
+    font-size: 20px;
+    
+}
+
+input:focus{
+    outline: none;
+}
+
+.comentarioError{
+    color: rgb(0, 42, 141);
+    font-size: 17px;
+    font-family:sans-serif;
+    height: 50px;
+    font-size: 20px;
+}
+
+.esperandoParrafo{
+    font-size: 22px;
+    color: rgb(255, 147, 51);
+    font-family:sans-serif;
+    font-size: 25px;
+}
+
+.opciones{
+    display: flex;
+    flex-wrap: wrap;
+    height: 230px;
+    justify-content: space-around;
+}
+
+
+.esperando{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+.depositoPantalla{
+    display: none;
+}
+
+.retiroPantalla{
+    display: none;
+}
+
+.consultaPantalla{
+    display: none;
+}
+
+.voucher{
+    display: none;
+}
+

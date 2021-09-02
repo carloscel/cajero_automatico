@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="contenedorPadre">
+    <div class="contenedor">
+        <div class="primeraPantalla pantalla">
+            <div >
+                <img class="imagenPrincipal" src="https://www.viabcp.com/wcm/connect/ca1162a0-aeee-49ef-9436-afc87b4c772c/img-atms.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-ca1162a0-aeee-49ef-9436-afc87b4c772c-nD83SSe" alt="">
+            </div>
+            <div>
+                <div class="contacto">
+                    <div><img class="telefono" src="telefono.png" alt=""></div>
+                    <p>311-9898</p>
+                </div>
+                <div>
+                    <h1>Ingresa tu DNI</h1>
+                    <input class="ingresoDatos" type="password" id="dni">
+                </div>
+                <div>
+                    <h1>Ingresa tu contraseña</h1>
+                    <input class="ingresoDatos" type="password" id="password">
+                </div>
+                <p class="comentarioError" id="noRegistrado"></p>
+                <div class="opcion" id="continuarDni" onclick="validar();">
+                    <p>Continuar</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="esperando pantalla">
+            <div class="contacto">
+                <div><img class="telefono" src="telefono.png" alt=""></div>
+                <p>311-9898</p>
+            </div>
+            <p class="esperandoParrafo">Espera un momento...</p>
+        </div>
+    
+        <div class="menu pantalla">
+            <div class="contacto">
+                <div><img class="telefono" src="telefono.png" alt=""></div>
+                <p>311-9898</p>
+            </div>
+            <h1>Menú Principal</h1>
+            <h2>Selecciona transacción Deseada</h2>
+            <div class="opciones">
+                <div class="opcion" onclick="retirarMonto();">
+                    <p>Retiro</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion">
+                    <p>Adelanto Sueldo</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion">
+                    <p>Transferencia</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion" onclick="consultarSaldo();">
+                    <p>Consultar Saldo</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion" onclick="ingresarMonto();">
+                    <p>Depósito</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion">
+                    <p>Más Opciones</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="depositoPantalla pantalla">
+            <div class="contacto">
+                <div><img class="telefono" src="telefono.png" alt=""></div>
+                <p>311-9898</p>
+            </div>
+            <h1>Depósito</h1>
+            <h2>Por favor ingresa la cantidad a depositar</h2>
+            <div>
+                <input class="ingresoDatos" type="number" id="deposito">
+                <button id="button" type="submit" onclick="ejecutarDeposito()">continuar</button>
+                <p class="comentarioError" id="mostrarDeposito"></p>
+            </div>
+            <div class="opcionesTwo">
+                <div class="opcion" onclick="menu();">
+                    <p>Menú</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion" onclick="salir()">
+                    <p>Salir</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="retiroPantalla pantalla">
+            <div class="contacto">
+                <div><img class="telefono" src="telefono.png" alt=""></div>
+                <p>311-9898</p>
+            </div>
+            <h1>Retiro</h1>
+            <h2>Por favor ingresa la cantidad a retirar</h2>
+            <div>
+                <input class="ingresoDatos" type="number" id="retiro">
+                <button id="button" type="submit" onclick="ejecutarRetiro()">continuar</button>
+                <p class="comentarioError" id="mostrarRetiro"></p>
+            </div>
+            <div class="opcionesTwo">
+                <div class="opcion" onclick="menu();">
+                    <p>Menú</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion" onclick="salir()">
+                    <p>Salir</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="consultaPantalla pantalla">
+            <div class="contacto">
+                <div><img class="telefono" src="telefono.png" alt=""></div>
+                <p>311-9898</p>
+            </div>
+            <h1>Consulta de Saldo</h1>
+            <p class="comentarioError" id="mostrarSaldo"></p>
+            <div class="opcionesTwo">
+                <div class="opcion" onclick="menu();">
+                    <p>Menú</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+                <div class="opcion" onclick="salir()">
+                    <p>Salir</p>
+                    <div><img class="flecha" src="doble-flecha.png" alt=""></div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>
+   
+    <script src="main.js"></script>
+</body>
+</html>
